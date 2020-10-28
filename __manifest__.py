@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Modulo modo de pago en sale order",
+    'name': "Modulo ejemplo 2",
 
     'summary': """
-    Siempre documentar el resumen o descripcion
+    muestra un subtitulo del módulo
       
     """,
 
@@ -12,7 +12,7 @@
     """,
 
     'author': "Jose Gallegos",
-    'website': "http://www.josegallegos.com",
+    'website': "https://re-odoo-10.readthedocs.io/capitulos/construyendo-tu-primera-aplicacion-odoo/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -21,17 +21,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale'],
+    'depends': ['sale','mail','base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         #'views/views.xml',
         #'views/templates.xml',
-        'views/sale_order_view.xml'
+        'views/sale_order_view.xml',
+        'views/todo_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
         #'demo/demo.xml',
     ],
+    'application': True,
 }
